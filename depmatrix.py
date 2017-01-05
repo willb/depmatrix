@@ -16,7 +16,7 @@ if __name__ == "__main__":
         match = start_project_pattern.match(line)
         if match is not None:
             current_project, = match.groups(1)
-            current_project = current_project.replace("_2.10","")
+            current_project = current_project.replace("_2.10","").replace("_2.11","")
             projects.add(current_project)
         else:
             match = dependency_pattern.match(line)
